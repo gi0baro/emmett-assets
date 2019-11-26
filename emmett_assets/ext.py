@@ -131,6 +131,8 @@ class CSSAsset(Asset):
 
 
 class AssetsLexer(Lexer):
+    evaluate = True
+
     def process(self, ctx, value):
         ctx.python_node(f'for _asset_url_ in __emt_assets_gen__("{value}"):')
         ctx.variable('_asset_url_', escape=False)
