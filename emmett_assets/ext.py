@@ -24,17 +24,17 @@ class Assets(Extension):
     )
 
     def on_load(self):
-        assets_path = os.path.join(self.app.root_path, 'assets')
-        if not os.path.exists(assets_path):
-            os.mkdir(assets_path)
-        out_path = os.path.join(self.app.static_path, self.config.out_folder)
-        out_url = '/static' + (
+        src_path = os.path.join(self.app.root_path, 'assets')
+        if not os.path.exists(src_path):
+            os.mkdir(src_path)
+        dst_path = os.path.join(self.app.static_path, self.config.out_folder)
+        dst_url = '/static' + (
             (self.config.out_folder and '/' + self.config.out_folder) or '')
         self.templates_ext = self.app.use_template_extension(
             AssetsTemplate,
             dst_path=dst_path,
             dst_url=dst_url,
-            src_path=assets_path
+            src_path=src_path
         )
 
     @property
