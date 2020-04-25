@@ -3,7 +3,9 @@ __pycache__
 
 *.sublime-*
 .venv
+.vscode
 
 build/*
 dist/*
-Emmett_Assets.egg-info/*
+emmett_assets.egg-info/*
+poetry.lock

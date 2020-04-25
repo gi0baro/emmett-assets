@@ -1,0 +1,47 @@
+[tool.poetry]
+name = "Emmett-Assets"
+version = "1.0.0.dev0"
+description = "Assets management for Emmett"
+authors = ["Giovanni Barillari <gi0baro@d4net.org>"]
+license = "BSD-3-Clause"
+
+readme = "README.md"
+homepage = "https://github.com/gi0baro/emmett-assets"
+repository = "https://github.com/gi0baro/emmett-assets"
+
+keywords = ["web", "assets", "emmett"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+packages = [
+    {include = "emmett_assets"}
+]
+include = [
+    "LICENSE"
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+coffeescript = "*"
+cssmin = "*"
+emmett = {version = ">1.0", allow-prereleases = true}
+jsmin = "*"
+libsass = "*"
+pyexecjs = "1.3.1"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.4.4"
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
