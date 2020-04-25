@@ -13,7 +13,7 @@ import os
 
 from emmett.extensions import Extension
 from renoir.extensions import Extension as RenoirExtension
-from renoir.lexers import Lexer
+from renoir import Lexer
 
 from .webassets import Environment, Bundle
 
